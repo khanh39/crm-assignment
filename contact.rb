@@ -32,7 +32,7 @@ class Contact
     @email = email
     @note = note
     @id = @@id
-    @@id += 1
+    # @@id += 1
   end
 
 
@@ -46,6 +46,20 @@ class Contact
     end
     return nil
   end
+
+  def main_menu
+    while true
+      print_main_menu
+      user_selected = gets.to_i
+      call_option(user_selected)
+    end
+  end
+
+
+
+
+
+
 
   # This method should allow you to specify
   # 1. which of the contact's attributes you want to update
